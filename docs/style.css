@@ -1,0 +1,60 @@
+.full-width-image {
+  width: 100%;
+}
+
+.pad-at-top {
+  padding-top: 10px;
+}
+
+.big-pad-at-top {
+  padding-top: 25px;
+}
+
+.floating-left {
+  float:left;
+  padding-right: 10px;
+}
+
+.workshop-card {
+  width: 100%;
+}
+
+.header-row {
+  background-color: #AAAAAA;
+}
+
+.first-container{
+  padding-top: 50px;
+}
+
+.card-img-bottom {
+  color: #fff;
+  height: 20rem;
+  background: url(https://dummyimage.com/800x400) center no-repeat;
+  background-size: cover;
+}
+
+body{
+  margin-bottom: 70px;
+}
+
+.card-footer>.card-title{
+  font-size: 1rem !important;
+}
+
+.card-header>.card-title{
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.completed{
+  color: #28a745;
+}
+
+.in-progress{
+  color: #ffc107;
+}
+
+.not-started{
+  color: #888888;
+}
