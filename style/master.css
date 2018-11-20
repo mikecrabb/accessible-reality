@@ -1,0 +1,133 @@
+:root{
+--color-one: #fad663;
+--color-two: #222222;
+--color-three: #ead591;
+--color-four: #bbeadd;
+--color-five: #f4f4f4;
+}
+
+@font-face {
+    font-family: FuturaBook;
+    src: url(Futura-Book.otf);
+}
+
+@font-face {
+    font-family: FuturaTitle;
+    src: url(Futura-Bol.otf);
+}
+
+p, ul, ol, li, a, th, td{
+  font-family: FuturaBook;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: FuturaTitle;
+}
+
+.workshop-title{
+  font-family: FuturaBook;
+  text-transform: uppercase;
+}
+
+.workshop-title-card{
+  font-family: FuturaBook;
+  text-transform: uppercase;
+  font-size: 1.3rem !important;
+}
+@media only screen and (min-width: 600px){
+  .container{
+    padding: 20px 100px;
+  }
+}
+
+.completed{
+  color: #28a745;
+}
+
+.in-progress{
+  color: #ffc107;
+}
+
+.not-started{
+  color: #888888;
+}
+
+
+body{
+  background-color: var(--color-five);
+}
+.logo-image{
+  height: 30px;
+}
+
+.logo-text{
+  height: 50px;
+  padding: 0 3px;
+}
+
+.logo-box{
+  display: inline-block;
+}
+
+.footerLogo{
+  display: inline-block;
+  height: 25px;
+}
+
+nav .nav-link{
+  border-bottom-color: rgba(0,0,0,0);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+nav .nav-link:hover{
+  border-bottom-color: #222222;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+
+}
+
+nav a.active {
+  border-bottom-color: var(--color-one);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+
+ .creative-commons-logos{
+   margin-bottom: 10px;
+ }
+
+.table-development{
+  white-space: nowrap;
+}
+
+.wdev-title{
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.noped{
+  color: rgba(255,99,71,0.5)
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.logo-img{
+  height: 30px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);  
+}

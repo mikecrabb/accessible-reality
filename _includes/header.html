@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style/master.css">
+  <title>Accessible Reality</title>
+</head>
+
+<body>
+  <div id="page-container">
+
+
+  <div class="container mt-4">
+
+    <div class="d-flex justify-content-center align-items-center">
+      <img class="logo-image logo-left" src="/images/logo-left.png" alt="">
+      <img class="logo-image logo-text ml-2 mr-2" src="/images/logo-text.png" alt="">
+      <img class="logo-image logo-right" src="/images/logo-right.png" alt="">
+    </div>
+
+    <div class="mt-2">
+      <nav>
+      <ul class="nav d-flex justify-content-center align-items-center">
+           {% assign sorted_pages = site.pages | sort:"order" %}
+   {% for node in sorted_pages %}
+   {% if node.type == "main" %}
+        <li class="nav-item"><a class="nav-link text-dark {% if page.url == node.url %} active {% endif %}" href="{{node.url}}">{{node.title}}</a></li>
+  {% endif %}
+   {% endfor %}
+</ul>
+</nav>
+    </div>
+  </div>

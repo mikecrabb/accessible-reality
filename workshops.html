@@ -1,0 +1,34 @@
+---
+title: Workshops
+layout: default
+type: main
+order: 2
+---
+
+  <div class="container bg-white">
+    <div class="row pt-3 pb-3 mt-3">
+      <div class="col">
+
+      <h1>Workshops</h1>
+
+    </div>
+      </div>
+
+    <div class="card-deck">
+      {% assign sorted_pages = site.pages | sort:"order" %}
+      {% for workshop in sorted_pages %}
+      {% if workshop.type == "workshop" %}
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="/images/{{workshop.header-image}}" alt="Designing for Accessibility">
+  <div class="card-body">
+    <h5 class="card-title workshop-title">{{workshop.title}}</h5>
+    <p class="card-text">{{workshop.description}}</p>
+    <a href="{{workshop.url | remove: ".html"}}" class="btn btn-primary btn-outline">Read More</a>
+  </div>
+
+</div>
+{% endif %}
+ {% endfor %}
+  </div>
+        </div>
+  </div>
