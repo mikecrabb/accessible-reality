@@ -1,0 +1,66 @@
+{% include header.html %}
+{{content}}
+
+
+      <h2 class="h4 pt-4"><span class="wdev-title">Workshop Development</span>
+        <i class="fas fa-xs fa-lightbulb {% if page.idea-generation=='completed' %}completed{% elsif page.idea-generation=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i>
+        <i class="fas fa-xs fa-map-signs {% if page.workshop-layout=='completed' %}completed{% elsif page.workshop-layout=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i>
+        <i class="fas fa-xs fa-map {% if page.resource-creation=='completed' %}completed{% elsif page.resource-creation=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i>
+        <i class="fas fa-xs fa-flask {% if page.pilot-testing=='completed' %}completed{% elsif page.pilot-testing=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i>
+        <i class="fas fa-xs fa-users {% if page.workshop-rollout=='completed' %}completed{% elsif page.workshop-rollout=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i>
+        <i class="fas fa-xs fa-chart-area {% if page.data-analysis=='completed' %}completed{% elsif page.data-analysis=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i>
+        <i class="fas fa-xs fa-sticky-note {% if page.paper-generation=='completed' %}completed{% elsif page.paper-generation=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i>
+
+      </h2>
+        <p>Each workshop that we create goes through several stages of development to make sure that it is covering the aspects that we intended it to.</p>
+        <table class="table table-striped" id="developmentInformation">
+          <thead>
+            <tr>
+              <th class="table-development">Development Stage</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-development"><i class="fas fa-lg fa-fw fa-lightbulb {% if page.idea-generation=='completed' %}completed{% elsif page.idea-generation=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i> Idea Generation</td>
+              <td>{{page.idea-generation-statement}}</td>
+            </tr>
+            <tr>
+              <td class="table-development"><i class="fas fa-lg fa-fw fa-map-signs {% if page.workshop-layout=='completed' %}completed{% elsif page.workshop-layout=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i> Workshop Layout</td>
+              <td>{{page.workshop-layout-statement}}</td>
+            </tr>
+            <tr>
+              <td class="table-development"><i class="fas fa-lg fa-fw fa-map {% if page.resource-creation=='completed' %}completed{% elsif page.resource-creation=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i> Resource Creation</td>
+              <td>{{page.resource-creation-statement}}</td>
+            </tr>
+            <tr>
+              <td class="table-development">
+                {% if page.pilot-testing=='notapplicable' %}
+                <span class="fa-stack fa-lg fa-fw ">
+                  <i class="fas fa-fw fa-stack-1x fa-flask not-started"></i>
+                  <i class="fas fa-fw fa-stack-2x fa-ban noped"></i>
+                </span>
+                {% else %}
+
+                <i class="fas fa-lg fa-fw fa-flask {% if page.pilot-testing=='completed' %}completed{% elsif page.pilot-testing=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i>{% endif %} Pilot Testing</td>
+              <td>{{page.pilot-testing-statement}}</td>
+            </tr>
+            <tr>
+              <td class="table-development"><i class="fas fa-lg fa-fw fa-users {% if page.workshop-rollout=='completed' %}completed{% elsif page.workshop-rollout=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i> Workshop Roll Out</td>
+              <td>{{page.workshop-rollout-statement}}</td>
+            </tr>
+            <tr>
+              <td class="table-development"><i class="fas fa-lg fa-fw fa-chart-area {% if page.data-analysis=='completed' %}completed{% elsif page.data-analysis=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i> Data Analysis</td>
+              <td>{{page.data-analysis-statement}}</td>
+            </tr>
+            <tr>
+              <td class="table-development"><i class="fas fa-lg fa-fw fa-sticky-note {% if page.paper-generation=='completed' %}completed{% elsif page.paper-generation=='in-progress' %}in-progress{% else %}not-started{% endif %}"></i> Paper Generation</td>
+              <td>{{page.paper-generation-statement}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}
